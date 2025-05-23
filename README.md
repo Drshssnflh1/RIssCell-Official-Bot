@@ -8,7 +8,7 @@ Proyek ini adalah bagian dari perjalanan belajar saya sebagai mahasiswa di **Uni
 **Fitur Utama**:
 - **!info**: Menampilkan Perintah semua yang ada di bot
 - **!ping**: Menampilkan Informasi dan Spesifikasi Bot
-- Dan fitur lainnya bisa dicoba senriri ya!!
+- Dan fitur lainnya bisa dicoba sendiri ya!!
 
 ## 🛠 Teknologi yang Digunakan
 - **Bahasa Pemrograman**: JavaScript
