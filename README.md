@@ -1,4 +1,4 @@
-# RIssCell Official Bot 🤖
+# RissCell Official Bot 🤖
 
 Selamat datang di project **RIssCell Official Bot**, sebuah proyek bot WhatsApp sederhana yang dibuat untuk sekedar gabut.🚀
 
