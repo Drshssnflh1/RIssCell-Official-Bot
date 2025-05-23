@@ -24,4 +24,4 @@ Proyek ini adalah bagian dari perjalanan belajar saya sebagai mahasiswa di **Uni
 - **Panel, Termux atau Pengeksekusi Program node.js** Mimin pakai Panel Pterodactyl
 
 ## Mau Mencobanya?
-wa.me/6287840957330
+📱 **WhatsApp**: [Hubungi saya di WhatsApp](https://wa.me/6287840957330)
