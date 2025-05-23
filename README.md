@@ -11,7 +11,7 @@ Proyek ini adalah bagian dari perjalanan belajar saya sebagai mahasiswa di **Uni
 - Dan fitur lainnya bisa dicoba senriri ya!!
 
 ## 🛠 Teknologi yang Digunakan
-- **Bahasa Pemrograman**:JavaScript
+- **Bahasa Pemrograman**: JavaScript
 - **Framework/Library**: Baileys
 - **API**: OpenWeather API, data gempa BMKG, Dll.
 
