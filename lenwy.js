@@ -2,12 +2,10 @@ const fs = require("fs");
 const os = require("os");
 const process = require("process");
 const { handleGempaCommand } = require("./functions/gempa");
-const { getJadwalHari } = require("./functions/jadwalKuliah");
 const { getAIResponse } = require("./functions/ai");
 const { getWeather } = require("./functions/weather");
 const { createSticker } = require("./functions/sticker");
 const { createTextSticker } = require("./functions/textsticker");
-const { convertStickerToImage } = require("./functions/toimg");
 const { resendOnceView } = require("./functions/ovd");
 const deepseekHandler = require("./functions/ai-deepseek").default;
 
@@ -147,67 +145,6 @@ module.exports = async (lenwy, m, { autoread, saveAutoread }) => {
 
         case "gempa":
             await handleGempaCommand(lenwy, sender, msg);
-            break;
-
-        case "jadwal":
-            if (args.length === 0 && !msg.message.listResponseMessage && !msg.message.buttonsResponseMessage) {
-                console.log(`Mengirim pesan untuk !jadwal ke ${sender} (Grup: ${isGroup})`);
-                try {
-                    if (!isGroup) {
-                        // List message untuk chat pribadi
-                        await lenwy.sendMessage(sender, {
-                            text: "Pilih hari untuk melihat jadwal kuliah kamu:",
-                            footer: "RissCell Official Bot",
-                            title: "Jadwal Kuliah",
-                            buttonText: "Pilih Hari",
-                            sections: [
-                                {
-                                    title: "Hari Kuliah",
-                                    rows: [
-                                        { title: "Senin", rowId: "!jadwal senin", description: "Jadwal kuliah hari Senin" },
-                                        { title: "Selasa", rowId: "!jadwal selasa", description: "Jadwal kuliah hari Selasa" },
-                                        { title: "Rabu", rowId: "!jadwal rabu", description: "Jadwal kuliah hari Rabu" },
-                                        { title: "Kamis", rowId: "!jadwal kamis", description: "Jadwal kuliah hari Kamis" },
-                                        { title: "Jumat", rowId: "!jadwal jumat", description: "Jadwal kuliah hari Jumat" },
-                                        { title: "Sabtu", rowId: "!jadwal sabtu", description: "Jadwal kuliah hari Sabtu" }
-                                    ]
-                                }
-                            ]
-                        });
-                        console.log("List message untuk !jadwal berhasil dikirim (chat pribadi)");
-                    } else {
-                        // Teks untuk grup
-                        await lenwy.sendMessage(sender, {
-                            text: `Pilih hari untuk jadwal kuliah:\n` +
-                                  `!jadwal senin\n!jadwal selasa\n!jadwal rabu\n!jadwal kamis\n!jadwal jumat\n!jadwal sabtu\n\n` +
-                                  `_RissCell Official Bot_`
-                        });
-                        console.log("Teks untuk !jadwal berhasil dikirim (grup)");
-                    }
-                } catch (error) {
-                    console.error("Gagal mengirim pesan untuk !jadwal:", error.message);
-                    // Fallback ke teks
-                    await lenwy.sendMessage(sender, {
-                        text: `Pilih hari untuk jadwal kuliah:\n` +
-                              `!jadwal senin\n!jadwal selasa\n!jadwal rabu\n!jadwal kamis\n!jadwal jumat\n!jadwal sabtu\n\n` +
-                              `_RissCell Official Bot_`
-                    });
-                    console.log("Fallback teks untuk !jadwal dikirim");
-                }
-                return;
-            }
-
-            const hari = args[0]?.toLowerCase() || "";
-            const jadwalText = getJadwalHari(hari);
-
-            if (!jadwalText) {
-                await lenwy.sendMessage(sender, {
-                    text: `Tidak ada jadwal kuliah di hari ${hari.charAt(0).toUpperCase() + hari.slice(1)}.`
-                });
-                return;
-            }
-
-            await lenwy.sendMessage(sender, { text: jadwalText });
             break;
 
         case "autoread":
