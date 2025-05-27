@@ -1,0 +1,24 @@
+{
+  "name": "Daris",
+  "version": "1.0",
+  "description": "RissCell Official Bot WhatsApp",
+  "main": "index.js",
+  "author": "Daris",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "github:naruyaizumi/baileys",
+    "chalk": "^4.1.2",
+    "pino": "8.14.1",
+    "axios": "^0.21.1",
+    "readline": "1.3.0",
+    "canvas": "2.11.2",
+    "puppeteer": "^24.7.2",
+    "dotenv": "^16.4.5",
+    "chokidar": "^4.0.3",
+    "uuid": "^10.0.0",
+    "wa-sticker-formatter": "^4.4.4"
+  }
+}
