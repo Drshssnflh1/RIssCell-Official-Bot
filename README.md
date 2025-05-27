@@ -1,6 +1,6 @@
 # RissCell Official Bot 🤖
 
-Selamat datang di project **RIssCell Official Bot**, sebuah proyek bot WhatsApp sederhana yang dibuat untuk sekedar gabut.🚀
+Selamat datang di project **RissCell Official Bot**, sebuah proyek bot WhatsApp sederhana yang dibuat untuk sekedar gabut.🚀
 
 ## 🎓 Tentang Proyek
 Proyek ini adalah bagian dari perjalanan belajar saya sebagai mahasiswa di **Universitas Muria Kudus**. Saya mengembangkan bot ini untuk mempelajari pemrograman dan teknologi bot, sekaligus memberikan manfaat bagi pengguna. 
